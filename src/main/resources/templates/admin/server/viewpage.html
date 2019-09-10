@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org"
+	layout:decorate="~{fragments/layout}">
+<head>
+<title>Secured</title>
+</head>
+<body>
+	<div layout:fragment="content" th:remove="tag">
+		<br>
+		<br>
+		<br>
+
+		
+		<div class="row">
+			<div class="col"><img th:if="${message == 'success'}" th:src="@{/img/robot_success.png}"  style="width:304px;height:200px"/></div>
+			<div class="col-6">
+				<div>
+					<h2>Comando foi executado com: <span class="badge badge-info" th:text=${message}></span></h2>
+					<p>
+						<a href="/" th:href="@{/}">Voltar para home page</a>
+					</p>
+				</div>
+			</div>
+			<div class="col">	<img th:if="${message == 'error'}" th:src="@{/img/robot_error.png}" /></div>
+		</div>
+		
+	</div>
+</body>
+</html>
+

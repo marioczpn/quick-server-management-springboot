@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org"
+	layout:decorate="~{fragments/layout}">
+<head>
+<title>Server Utility</title>
+</head>
+<body>
+	<div layout:fragment="content" th:remove="tag">
+		<br>
+		<br>
+		<br>
+		<h1 style="text-align:left"><!-- Server  <span class="badge badge-warning">Utility</span> --></h1>
+		<br>
+		<div class="row">
+			<div class="col"><img th:src="@{/img/cavet.png}" alt="mariocp logo" style="width:184px;height:100px"/></div>
+			<div class="col-6">
+				<p>
+					<a  class="btn btn-dark btn-lg btn-block" th:href="@{/admin}">Admin Page</a>
+				</p>
+				<p>
+					<a class="btn btn-primary btn-lg btn-block" th:href="@{/user}">User Page</a>
+				</p>
+			</div>
+			<div class="col"></div>
+		</div>
+	</div>
+</body>
+</html>

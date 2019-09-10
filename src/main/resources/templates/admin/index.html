@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org"
+	layout:decorate="~{fragments/layout}">
+<head>
+<title>Secured</title>
+</head>
+<body>
+	<div layout:fragment="content" th:remove="tag">
+		<h1>Server <img th:src="@{/img/admin_logo.png}" alt="admin logo" style="width:304px;height:150px"/> </h1>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+				
+				</div>
+				<div class="col-6">
+					<div class="card" style="width: 18rem;">
+						<div class="card-body"  style="text-align: center">
+							<h5 class="card-title">Selecione uma opcao:</h5>
+							<h6 class="card-subtitle mb-2 text-muted"></h6>
+							<p class="card-text"></p>
+							<a class="btn btn-sm btn-primary btn-lg" th:href="@{admin/restart}">Reiniciar Servidor</a>
+							<br>
+							<br>
+							<a class="btn btn-sm btn-danger btn-lg" th:href="@{admin/shutdown}">Desligar Servidor</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
